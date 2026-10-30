@@ -1,32 +1,30 @@
 # ByteTicks
 
-ByteTicks is a desktop platform for market data, charting, and trading analytics. It is intended for traders and market researchers who want to observe markets, examine historical activity, and explore trading ideas in a desktop workspace.
+ByteTicks is a desktop trading and analysis terminal for cryptocurrency markets. It brings price charts, order-flow analysis, locally recorded market history, and paper trading into one workspace for traders and market researchers.
 
-The application brings together live market observation, local history recording, research tools, and simulated trading. These capabilities support a workflow from watching price activity to reviewing recorded data and practising trading decisions with paper accounts.
+The focus is on understanding market activity: how price moves, where trading volume is concentrated, and how visible liquidity changes. Recorded data lets users revisit that activity and investigate trading ideas.
 
 ## Core capabilities
 
-- **Market data:** access live market information for monitoring and analysis.
-- **Charts:** inspect price movements and historical market activity through interactive charts.
-- **Analytics:** examine market metrics alongside price charts to support market research.
-- **Local history recording:** record market history locally for later review and analysis.
-- **Research tools:** use historical replay and backtesting to investigate trading ideas with available historical data.
-- **Paper trading:** practise order placement and review simulated trading activity using paper accounts.
+| Area | What it enables |
+| --- | --- |
+| **Market observation** | Follow live exchange trades and order-book data alongside price charts and indicators. |
+| **Order-flow analysis** | Examine buying and selling volume with footprint charts, inspect visible liquidity with heatmaps, and set alerts on market conditions. |
+| **History and research** | Record market data locally for later analysis. Historical replay and backtesting tools are being developed around the available recorded data. |
+| **Paper trading** | Place simulated orders, manage simulated positions, and review trading results without committing real funds. |
 
-## Technology
+![ByteTicks product map: market observation, order-flow analysis, history and research, and paper trading](assets/ByteTicks-Product-Map.png)
 
-ByteTicks is built with **React**, **TypeScript**, **Rust**, and **Tauri**. This stack supports the desktop application and its market analysis tools.
+## Engineering scope
 
-## Engineering Scope
+The work spans streaming market data, chart rendering, local storage, and simulated order execution. Key engineering tasks include:
 
-ByteTicks combines a desktop user interface, backend components, streaming data processing, and local storage. Its existing functionality spans live exchange data, history recording, analytics, and visualization, requiring coordinated behavior across these parts of the application.
+- Keeping live updates and historical views consistent when users change instruments or time ranges.
+- Maintaining responsive charts while market data arrives and users interact with the workspace.
+- Keeping simulated orders, fills, positions, and account balances consistent throughout a trading session.
 
-Detailed interactive charts introduce performance demands as incoming data, historical views, and user interactions compete for processing and rendering time. Asynchronous operations, state management, and communication between components add integration challenges: updates must remain coherent as data arrives and users change their workspace.
+**Stack:** React, TypeScript, Rust, and Tauri.
 
-Engineering work includes testing individual components and their interactions, handling changes in data and connection state, and improving stability across these workflows. The product remains under active development; integration, validation, and refinement continue as the first MVP is prepared.
+## Status
 
-## Development status
-
-ByteTicks is under active development. Most core functionality has been implemented, and the project is being prepared for its first minimum viable product (MVP). Features continue to be refined and validated as part of that work.
-
-There is no commercial release yet. The main application's source code is private. This public repository provides a concise product overview for prospective users and technical readers.
+ByteTicks is under active development toward its first MVP. There is no commercial release yet. The main application source code is private; this repository contains its public overview.
