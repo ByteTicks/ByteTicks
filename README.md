@@ -1,32 +1,52 @@
 # ByteTicks
 
-ByteTicks is a desktop trading and analysis terminal for cryptocurrency markets. It brings price charts, order-flow analysis, locally recorded market history, and paper trading into one workspace for traders and market researchers.
+ByteTicks is a desktop trading and analysis terminal for cryptocurrency markets. It connects market observation, historical research, and trading workflows in one workspace for traders and market researchers.
 
-The focus is on understanding market activity: how price moves, where trading volume is concentrated, and how visible liquidity changes. Recorded data lets users revisit that activity and investigate trading ideas.
+## User workflow
 
-## Core capabilities
+### 1. Observe
 
-| Area | What it enables |
-| --- | --- |
-| **Market observation** | Follow live exchange trades and order-book data alongside price charts and indicators. |
-| **Order-flow analysis** | Examine buying and selling volume with footprint charts, inspect visible liquidity with heatmaps, and set alerts on market conditions. |
-| **History and research** | Record market data locally for later analysis. Historical replay and backtesting tools are being developed around the available recorded data. |
-| **Paper trading** | Place simulated orders, manage simulated positions, and review trading results without committing real funds. |
+Understand price, volume, and visible liquidity.
 
-![ByteTicks product map: market observation, order-flow analysis, history and research, and paper trading](product-map/ByteTicks-Product-Map.png)
+- Live trades, order books, price charts, and indicators.
+- Footprints, volume profiles, and liquidity heatmaps.
+- Multiple charts with saved, reusable workspace layouts.
+
+### 2. Investigate
+
+Turn observations into testable market conditions.
+
+- Define market conditions and alerts.
+- Record and revisit market history locally.
+- Replay history, backtest supported conditions, and inspect run reports.
+
+Replay and backtesting are partially implemented and evolving. Coverage depends on available history and supported scenarios.
+
+### 3. Trade & review
+
+Place orders, track positions, and review results.
+
+- Place and cancel orders; manage positions.
+- Paper trading for simulated execution.
+- Trade journal, fills, and basic result analysis.
+
+Exchange-connected trading is limited to supported test/demo workflows. Real-money trading is not available.
+
+![ByteTicks product map: Observe, Investigate, Trade and review, with engineering scope](product-map/ByteTicks-Product-Map.png)
 
 [Editable Obsidian Canvas](product-map/ByteTicks-Product-Map.canvas)
 
 ## Engineering scope
 
-The work spans streaming market data, chart rendering, local storage, and simulated order execution. Key engineering tasks include:
+These workflows involve concurrent market updates, historical data, interactive charts, and changing trading state. Engineering work addresses:
 
-- Keeping live updates and historical views consistent when users change instruments or time ranges.
-- Maintaining responsive charts while market data arrives and users interact with the workspace.
-- Keeping simulated orders, fills, positions, and account balances consistent throughout a trading session.
+- **Consistent market context:** Keep live streams, recorded history, indicators, and alerts aligned across data sources, instruments, and time ranges.
+- **Dense, responsive charts:** Render detailed order-flow views across multiple charts while data arrives, within memory and processing budgets.
+- **Durable market history:** Handle continuous recording, time-window queries, retention, and recovery of stored market data.
+- **Trading state and recovery:** Keep orders, fills, positions, balances, and journal results coherent across asynchronous updates and connection interruptions.
 
 **Stack:** React, TypeScript, Rust, and Tauri.
 
 ## Status
 
-ByteTicks is under active development toward its first MVP. There is no commercial release yet. The main application source code is private; this repository contains its public overview.
+Active development toward the first MVP. No commercial release yet. The main application source code is private. This repository contains the public product overview.

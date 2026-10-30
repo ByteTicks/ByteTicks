@@ -5,64 +5,108 @@
       "type": "text",
       "x": 64,
       "y": 35,
-      "width": 1472,
-      "height": 215,
-      "text": "# ByteTicks\nDesktop trading and analysis for cryptocurrency markets.\n\nRead price, volume, and liquidity. Revisit history. Practise with paper trading.\n\nActive development / Pre-MVP."
+      "width": 1792,
+      "height": 220,
+      "text": "# ByteTicks\nDesktop trading and analysis for cryptocurrency markets.\n\nFrom live market observation to historical research, order management, and trade review.\n\nActive development / Pre-MVP."
     },
     {
-      "id": "market",
+      "id": "observe",
       "type": "text",
       "x": 64,
-      "y": 280,
-      "width": 720,
-      "height": 266,
-      "text": "## Market observation\n\n- Live exchange trades and order-book data\n- Price charts and indicators"
+      "y": 290,
+      "width": 568,
+      "height": 610,
+      "text": "## Observe\nUnderstand price, volume, and visible liquidity.\n\n- Live trades, order books, price charts, and indicators.\n- Footprints, volume profiles, and liquidity heatmaps.\n- Multiple charts with saved, reusable workspace layouts."
     },
     {
-      "id": "analysis",
+      "id": "investigate",
       "type": "text",
-      "x": 816,
-      "y": 280,
-      "width": 720,
-      "height": 266,
-      "text": "## Order-flow analysis\n\n- Footprint charts: buying and selling volume\n- Heatmaps: changes in visible liquidity\n- Alerts on market conditions"
+      "x": 676,
+      "y": 290,
+      "width": 568,
+      "height": 610,
+      "text": "## Investigate\nTurn observations into testable market conditions.\n\n- Define market conditions and alerts.\n- Record and revisit market history locally.\n- Replay history, backtest supported conditions, and inspect run reports.\n\nReplay and backtesting are partially implemented and evolving. Coverage depends on available history and supported scenarios."
     },
     {
-      "id": "history",
+      "id": "trade-review",
       "type": "text",
+      "x": 1288,
+      "y": 290,
+      "width": 568,
+      "height": 610,
+      "text": "## Trade & review\nPlace orders, track positions, and review results.\n\n- Place and cancel orders; manage positions.\n- Paper trading for simulated execution.\n- Trade journal, fills, and basic result analysis.\n\nExchange-connected trading is limited to supported test/demo workflows. Real-money trading is not available."
+    },
+    {
+      "id": "engineering-group",
+      "type": "group",
       "x": 64,
-      "y": 574,
-      "width": 720,
-      "height": 266,
-      "text": "## History & research\n\n- Local recording for later market analysis\n- Historical replay and backtesting\n\nReplay and backtesting are in development; coverage depends on available history."
+      "y": 940,
+      "width": 1792,
+      "height": 380,
+      "label": "Engineering scope / Problems addressed"
     },
     {
-      "id": "paper",
+      "id": "engineering-0",
       "type": "text",
-      "x": 816,
-      "y": 574,
-      "width": 720,
-      "height": 266,
-      "text": "## Paper trading\n\n- Simulated orders and positions\n- Trading results without real funds"
+      "x": 92,
+      "y": 1010,
+      "width": 824,
+      "height": 136,
+      "text": "### Consistent market context\nKeep live streams, recorded history, indicators, and alerts aligned across data sources, instruments, and time ranges."
     },
     {
-      "id": "engineering",
+      "id": "engineering-1",
       "type": "text",
-      "x": 64,
-      "y": 884,
-      "width": 1472,
-      "height": 272,
-      "text": "## Engineering scope\n\n**Data consistency**\nKeep live and historical views aligned as instruments and time ranges change.\n\n**Chart responsiveness**\nHandle incoming market updates alongside chart interaction.\n\n**Simulation consistency**\nKeep orders, fills, positions, and balances consistent during a session."
+      "x": 988,
+      "y": 1010,
+      "width": 824,
+      "height": 136,
+      "text": "### Dense, responsive charts\nRender detailed order-flow views across multiple charts while data arrives, within memory and processing budgets."
+    },
+    {
+      "id": "engineering-2",
+      "type": "text",
+      "x": 92,
+      "y": 1159,
+      "width": 824,
+      "height": 136,
+      "text": "### Durable market history\nHandle continuous recording, time-window queries, retention, and recovery of stored market data."
+    },
+    {
+      "id": "engineering-3",
+      "type": "text",
+      "x": 988,
+      "y": 1159,
+      "width": 824,
+      "height": 136,
+      "text": "### Trading state and recovery\nKeep orders, fills, positions, balances, and journal results coherent across asynchronous updates and connection interruptions."
     },
     {
       "id": "status",
       "type": "text",
       "x": 64,
-      "y": 1195,
-      "width": 1472,
-      "height": 112,
-      "text": "React / TypeScript / Rust / Tauri\n\nNo commercial release yet. Main application source code is private."
+      "y": 1360,
+      "width": 1792,
+      "height": 120,
+      "text": "React / TypeScript / Rust / Tauri\n\nActive development toward the first MVP. No commercial release yet.\nThe main application source code is private."
     }
   ],
-  "edges": []
+  "edges": [
+    {
+      "id": "workflow-0",
+      "fromNode": "observe",
+      "fromSide": "right",
+      "toNode": "investigate",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "workflow-1",
+      "fromNode": "investigate",
+      "fromSide": "right",
+      "toNode": "trade-review",
+      "toSide": "left",
+      "toEnd": "arrow"
+    }
+  ]
 }
