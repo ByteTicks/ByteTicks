@@ -17,6 +17,14 @@ The application brings together live market observation, local history recording
 
 ByteTicks is built with **React**, **TypeScript**, **Rust**, and **Tauri**. This stack supports the desktop application and its market analysis tools.
 
+## Engineering Scope
+
+ByteTicks combines a desktop user interface, backend components, streaming data processing, and local storage. Its existing functionality spans live exchange data, history recording, analytics, and visualization, requiring coordinated behavior across these parts of the application.
+
+Detailed interactive charts introduce performance demands as incoming data, historical views, and user interactions compete for processing and rendering time. Asynchronous operations, state management, and communication between components add integration challenges: updates must remain coherent as data arrives and users change their workspace.
+
+Engineering work includes testing individual components and their interactions, handling changes in data and connection state, and improving stability across these workflows. The product remains under active development; integration, validation, and refinement continue as the first MVP is prepared.
+
 ## Development status
 
 ByteTicks is under active development. Most core functionality has been implemented, and the project is being prepared for its first minimum viable product (MVP). Features continue to be refined and validated as part of that work.
