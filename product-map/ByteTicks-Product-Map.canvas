@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 64,
+      "y": 35,
+      "width": 1472,
+      "height": 215,
+      "text": "# ByteTicks\nDesktop trading and analysis for cryptocurrency markets.\n\nRead price, volume, and liquidity. Revisit history. Practise with paper trading.\n\nActive development / Pre-MVP."
+    },
+    {
+      "id": "market",
+      "type": "text",
+      "x": 64,
+      "y": 280,
+      "width": 720,
+      "height": 266,
+      "text": "## Market observation\n\n- Live exchange trades and order-book data\n- Price charts and indicators"
+    },
+    {
+      "id": "analysis",
+      "type": "text",
+      "x": 816,
+      "y": 280,
+      "width": 720,
+      "height": 266,
+      "text": "## Order-flow analysis\n\n- Footprint charts: buying and selling volume\n- Heatmaps: changes in visible liquidity\n- Alerts on market conditions"
+    },
+    {
+      "id": "history",
+      "type": "text",
+      "x": 64,
+      "y": 574,
+      "width": 720,
+      "height": 266,
+      "text": "## History & research\n\n- Local recording for later market analysis\n- Historical replay and backtesting\n\nReplay and backtesting are in development; coverage depends on available history."
+    },
+    {
+      "id": "paper",
+      "type": "text",
+      "x": 816,
+      "y": 574,
+      "width": 720,
+      "height": 266,
+      "text": "## Paper trading\n\n- Simulated orders and positions\n- Trading results without real funds"
+    },
+    {
+      "id": "engineering",
+      "type": "text",
+      "x": 64,
+      "y": 884,
+      "width": 1472,
+      "height": 272,
+      "text": "## Engineering scope\n\n**Data consistency**\nKeep live and historical views aligned as instruments and time ranges change.\n\n**Chart responsiveness**\nHandle incoming market updates alongside chart interaction.\n\n**Simulation consistency**\nKeep orders, fills, positions, and balances consistent during a session."
+    },
+    {
+      "id": "status",
+      "type": "text",
+      "x": 64,
+      "y": 1195,
+      "width": 1472,
+      "height": 112,
+      "text": "React / TypeScript / Rust / Tauri\n\nNo commercial release yet. Main application source code is private."
+    }
+  ],
+  "edges": []
+}

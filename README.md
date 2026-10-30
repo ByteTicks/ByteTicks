@@ -13,7 +13,9 @@ The focus is on understanding market activity: how price moves, where trading vo
 | **History and research** | Record market data locally for later analysis. Historical replay and backtesting tools are being developed around the available recorded data. |
 | **Paper trading** | Place simulated orders, manage simulated positions, and review trading results without committing real funds. |
 
-![ByteTicks product map: market observation, order-flow analysis, history and research, and paper trading](assets/ByteTicks-Product-Map.png)
+![ByteTicks product map: market observation, order-flow analysis, history and research, and paper trading](product-map/ByteTicks-Product-Map.png)
+
+[Editable Obsidian Canvas](product-map/ByteTicks-Product-Map.canvas)
 
 ## Engineering scope
 
